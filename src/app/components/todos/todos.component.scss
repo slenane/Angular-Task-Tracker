@@ -1,0 +1,23 @@
+section {
+  .todo_header {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: end;
+    margin-bottom: 2rem;
+
+    .add-task_button {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  mat-spinner {
+    margin: 20% auto;
+  }
+
+  .no-todo-message {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,38 @@
+<section>
+  <mat-card>
+    <div class="todo_header">
+      <div class="add-task_button" *ngIf="isAdmin">
+        <button mat-raised-button color="primary" (click)="openDialog()">
+          Add Task
+        </button>
+      </div>
+    </div>
+
+    <mat-spinner *ngIf="contentLoading"></mat-spinner>
+
+    <div class="todos" *ngIf="!contentLoading">
+      <h2>Ongoing Tasks</h2>
+      <div *ngFor="let todo of todos | async">
+        <app-todo-item
+          *ngIf="!todo.isComplete"
+          [todo]="todo"
+          (onToggleStatus)="toggleStatus(todo)"
+          (onEditTodo)="openDialog(todo)"
+          (onDeleteTodo)="deleteTodo(todo)"
+          [isAdmin]="isAdmin"
+        ></app-todo-item>
+      </div>
+      <h2>Completed Tasks</h2>
+      <div *ngFor="let todo of todos | async">
+        <app-todo-item
+          *ngIf="todo.isComplete"
+          [todo]="todo"
+          (onToggleStatus)="toggleStatus(todo)"
+          (onEditTodo)="openDialog(todo)"
+          (onDeleteTodo)="deleteTodo(todo)"
+          [isAdmin]="isAdmin"
+        ></app-todo-item>
+      </div>
+    </div>
+  </mat-card>
+</section>

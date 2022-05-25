@@ -1,0 +1,17 @@
+mat-card {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  mat-progress-spinner {
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    mat-progress-spinner {
+      order: 2;
+    }
+  }
+}

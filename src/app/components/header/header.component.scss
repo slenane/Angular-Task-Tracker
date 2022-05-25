@@ -1,0 +1,36 @@
+header {
+  background-color: white;
+
+  nav {
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    .nav-brand {
+      img {
+        width: 150px;
+        margin: 1rem 0;
+      }
+    }
+
+    .nav-links {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      list-style: none;
+
+      a {
+        color: #323333;
+        text-decoration: none;
+
+        &.active,
+        &:hover {
+          padding-bottom: 0.2rem;
+          border-bottom: 3px solid #323333;
+        }
+      }
+    }
+  }
+}

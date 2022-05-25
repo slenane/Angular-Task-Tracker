@@ -1,0 +1,12 @@
+main {
+  margin: 0 10%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  gap: 1rem;
+
+  @media screen and (max-width: 700px) {
+    margin: 1rem 10%;
+    grid-template-columns: 1fr;
+  }
+}

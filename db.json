@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "email": "test@email.com",
+      "password": "$2a$10$USQIlt9xhlzpvQBHYAkaiOJmqw.m/q.PdVd8LP4jDQjCUCFv6tpE6",
+      "isAdmin": false,
+      "id": 1
+    },
+    {
+      "email": "admin@email.com",
+      "password": "$2a$10$fMkw9MQcRNapFuT.P6zCTeMXqzEw0jJCvY.oai5YTC6oGZUyKu0XC",
+      "isAdmin": true,
+      "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "title": "Task 1",
+      "date": "2022-06-24T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "title": "Task 2",
+      "date": "2022-05-24T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": true,
+      "completionDate": "2022-05-25T10:42:58.322Z"
+    },
+    {
+      "id": 3,
+      "title": "Task 3",
+      "date": "2022-05-14T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": true,
+      "completionDate": "2022-05-23T18:31:12.295Z"
+    },
+    {
+      "id": 4,
+      "title": "Task 4",
+      "date": "2022-05-26T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": true,
+      "completionDate": "2022-05-23T16:38:02.852Z"
+    },
+    {
+      "title": "Task 5",
+      "date": "2022-09-25T22:00:00.000Z",
+      "isPriority": false,
+      "isComplete": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "Task 6",
+      "date": "2022-06-25T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": false
+    },
+    {
+      "id": 7,
+      "title": "Task 7",
+      "date": "2022-05-25T22:00:00.000Z",
+      "isPriority": false,
+      "isComplete": true,
+      "completionDate": "2022-05-24T20:21:19.556Z"
+    },
+    {
+      "id": 8,
+      "title": "Task 8",
+      "date": "2022-05-25T22:00:00.000Z",
+      "isPriority": true,
+      "isComplete": false
+    },
+    {
+      "id": 9,
+      "title": "Task 9",
+      "date": "2022-05-11T22:00:00.000Z",
+      "isPriority": false,
+      "isComplete": false
+    }
+  ]
+}

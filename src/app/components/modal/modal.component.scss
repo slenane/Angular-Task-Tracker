@@ -1,0 +1,14 @@
+.modal_body {
+  text-align: center;
+  display: grid;
+  align-items: center;
+
+  .mat-form-field {
+    display: block;
+  }
+
+  .dialog_actions {
+    text-align: center;
+    margin: 0 auto;
+  }
+}

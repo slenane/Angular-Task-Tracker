@@ -1,0 +1,14 @@
+<section>
+  <mat-card>
+    <mat-progress-spinner
+      mode="determinate"
+      value="{{ (todoData.completed / todoData.total) * 100 }}"
+    ></mat-progress-spinner>
+    <div class="sidebar-data">
+      <p>Total Tasks: {{ todoData.total }}</p>
+      <p>Priority Tasks: {{ todoData.priority }}</p>
+      <p>Standard Tasks: {{ todoData.standard }}</p>
+      <p>Completed Tasks: {{ todoData.completed }}</p>
+    </div>
+  </mat-card>
+</section>

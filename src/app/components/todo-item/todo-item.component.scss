@@ -1,0 +1,21 @@
+mat-card {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+
+  .todo-item__right {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+  }
+}
+
+mat-card.red {
+  border-left: 5px solid red;
+}
+
+mat-card.green {
+  border-left: 5px solid green;
+}

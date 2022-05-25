@@ -1,0 +1,39 @@
+<div>
+  <h1 mat-dialog-title>Login</h1>
+
+  <mat-error *ngIf="loginError">
+    <p>Email or password is incorrect, please try again</p>
+  </mat-error>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" />
+
+      <mat-error *ngIf="email.invalid">
+        Your email doesn't look right
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" />
+
+      <mat-error *ngIf="password.invalid">
+        Password must be at least 5 characters
+      </mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <div class="dialog_actions">
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

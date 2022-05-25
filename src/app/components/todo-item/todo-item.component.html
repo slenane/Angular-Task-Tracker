@@ -1,0 +1,49 @@
+<mat-card class="{{ colorCategory }} mat-card">
+  <div class="todo-item__left">
+    <mat-card-title>{{ todo.title }}</mat-card-title>
+    <div *ngIf="checked">
+      <mat-card-subtitle *ngIf="aheadOfSchedule > 0"
+        >Task completed on {{ completionDate }} - {{ aheadOfSchedule }} days
+        ahead of schedule</mat-card-subtitle
+      >
+      <mat-card-subtitle *ngIf="aheadOfSchedule === 0"
+        >Task completed on {{ completionDate }} - on schedule</mat-card-subtitle
+      >
+      <mat-card-subtitle *ngIf="aheadOfSchedule < 0"
+        >Task completed on {{ completionDate }} - {{ -aheadOfSchedule }} days
+        behind schedule</mat-card-subtitle
+      >
+    </div>
+
+    <div *ngIf="!checked">
+      <mat-card-subtitle *ngIf="remainingTime > 0"
+        >This task is due in {{ remainingTime }} days</mat-card-subtitle
+      >
+      <mat-card-subtitle *ngIf="remainingTime === 0"
+        >This task is due today</mat-card-subtitle
+      >
+      <mat-card-subtitle *ngIf="remainingTime < 0"
+        >This task is {{ -remainingTime }} days overdue</mat-card-subtitle
+      >
+    </div>
+  </div>
+  <div class="todo-item__right" *ngIf="isAdmin">
+    <button mat-raised-button color="primary" (click)="onEdit(todo)">
+      Edit
+    </button>
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      (click)="onDelete(todo)"
+    >
+      Delete
+    </button>
+  </div>
+  <div *ngIf="!isAdmin">
+    <mat-checkbox
+      [(ngModel)]="checked"
+      (change)="onToggle(todo)"
+    ></mat-checkbox>
+  </div>
+</mat-card>

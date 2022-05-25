@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <div class="nav-brand">
+      <a routerLink="/"
+        ><img
+          src="../../../assets/images/logo_gray_spaced.png"
+          alt="bmetric logo"
+      /></a>
+    </div>
+    <ul class="nav-links">
+      <li *ngIf="authenticatedUser.token !== null">
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li
+        *ngIf="
+          authenticatedUser.token !== null && authenticatedUser.isAdmin === true
+        "
+      >
+        <a routerLink="/admin" routerLinkActive="active">Admin</a>
+      </li>
+      <li *ngIf="authenticatedUser.token !== null">
+        <a routerLink="/" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</header>
